@@ -188,10 +188,10 @@ def hashtags_match(string_from_series):
       return hashtags
 
   #--------Calling and using the two functions to modify the Dataframe---------
-  df['municipality'] = df['Tweets'].apply(municipality_match)       #Calling the municipality_match function using the pandas series method apply() to modify by creating the municipality column.  
-  df['hashtags'] = df['Tweets'].apply(hashtags_match)         #Calling the hashtags_match function using the pandas series method apply() to modify by creating the hashtags column. 
+      df['municipality'] = df['Tweets'].apply(municipality_match)       #Calling the municipality_match function using the pandas series method apply() to modify by creating the municipality column.  
+      df['hashtags'] = df['Tweets'].apply(hashtags_match)         #Calling the hashtags_match function using the pandas series method apply() to modify by creating the hashtags column. 
   #-------------
-  return df     #returnig the resulting dataframe with all the changes.
+      return df     #returnig the resulting dataframe with all the changes.
 
 ### END FUNCTION 4
 
@@ -245,6 +245,7 @@ def word_splitter(df):
     """
     # your code here
     df['Split Tweets'] = df['Tweets'].apply(lambda string_from_series: string_from_series.lower().split())
+    
     return df
 
 ### END FUNCTION 6
@@ -272,6 +273,7 @@ def stop_words_remover(df,  stop_words_dict = stop_words_dict ):
       return [ word for word in string_from_serie.lower().split() if word not in stop_words_dict['stopwords']]
 
     df['Without Stop Words'] = df['Tweets'].apply(remover)
+    
     return df
 
 ### END FUNCTION 7
