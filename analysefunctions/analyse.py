@@ -175,7 +175,7 @@ def municipality_match(string_from_series):
     return municipality                             #Returning the resulting list of municipalities per tweet
 
   #----------hashtags_match function--------
-  def hashtags_match(string_from_series):
+def hashtags_match(string_from_series):
       hashtags = []         #declearing an empty list to store the hashtags
       for word in string_from_series.lower().split(' '): # spliting the received string into a list of words and looping from the list to access each word at the time!
         if word.startswith('#'):        #checking if the retrieved word starts with a #
