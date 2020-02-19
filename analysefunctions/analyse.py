@@ -166,7 +166,7 @@ def extract_municipality_hashtags(df, mun_dict = mun_dict):
   """
 
   #----------municipality_match function--------
-  def municipality_match(string_from_series):
+def municipality_match(string_from_series):
     municipality = np.nan     #declearing and assigning the municipality list with nan from np.nan
     for dic_key in mun_dict:               #looping through the municipality_dict dictionary and grabing one key at a time.
       if dic_key in string_from_series:             #checking if the dictionary key is in or contained within the string_from_series from the pandas series of tweets.
